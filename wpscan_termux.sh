@@ -43,7 +43,7 @@ echo "Installing packages..."
 echo
 sleep .5
 yes | pkg up
-yes | pkg install ruby clang make binutils proot pkg-config libxslt
+yes | pkg install ruby clang make binutils proot resolv-conf pkg-config libxslt
 sleep .5
 gem install nokogiri --platform=ruby -- --use-system-libraries
 }
