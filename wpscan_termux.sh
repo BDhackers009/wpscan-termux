@@ -53,10 +53,11 @@ PREFIX="/data/data/com.termux/files/usr"
 mv $PREFIX/bin/wpscan $PREFIX/bin/bwpscan
 cat <<- EOF > $PREFIX/bin/wpscan
 #!/bin/bash
-cmnd="$@"
+cmnd="pro"
 termux-chroot bwpscan "$cmnd"
 EOF
 chmod +x $PREFIX/bin/wpscan
+sed -i "s/pro/\$@/g" $(which wpscan)
 }
 main() {
     install_nokogiri
