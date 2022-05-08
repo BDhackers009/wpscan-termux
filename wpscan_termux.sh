@@ -70,7 +70,7 @@ main() {
     gem install wpscan
     sleep .5
     fix_libc
-    prosetup
+   #prosetup
 }
 
 main
