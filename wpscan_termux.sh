@@ -53,8 +53,7 @@ PREFIX="/data/data/com.termux/files/usr"
 mv $PREFIX/bin/wpscan $PREFIX/bin/bwpscan
 cat <<- EOF > $PREFIX/bin/wpscan
 #!/bin/bash
-cmnd="pro"
-termux-chroot bwpscan "$cmnd"
+termux-chroot bwpscan "pro"
 EOF
 chmod +x $PREFIX/bin/wpscan
 sed -i "s/pro/\$@/g" $(which wpscan)
